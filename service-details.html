@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Service Details - Gp Bootstrap Template</title>
+  <title>Service Details - Beezy Solutions</title>
   <meta name="description" content="">
   <meta name="keywords" content="">
 
@@ -38,41 +38,119 @@
 
 <body class="service-details-page">
 
-  <header id="header" class="header d-flex align-items-center position-relative">
+  <!-- <script>
+    (function() {
+      const urlParams = new URLSearchParams(window.location.search);
+      const filterValue = urlParams.get('filter') || '.filter-app1'; // Default to .filter-app1
+  
+      document.addEventListener('DOMContentLoaded', function() {
+        const isotopeLayout = document.querySelector('.isotope-layout');
+        const isotopeContainer = isotopeLayout.querySelector('.isotope-container');
+  
+        // Set data-default-filter (optional if initializing manually)
+        isotopeLayout.setAttribute('data-default-filter', filterValue);
+  
+        // Update active filter in the services list
+        const filterItems = document.querySelectorAll('.isotope-filters li');
+        filterItems.forEach(item => {
+          item.classList.remove('filter-active');
+          if (item.getAttribute('data-filter') === filterValue) {
+            item.classList.add('filter-active');
+          }
+        });
+
+        // Initialize Isotope directly
+        const initIsotope = new Isotope(isotopeContainer, {
+          itemSelector: '.isotope-item',
+          // layoutMode: isotopeLayout.getAttribute('data-layout') || 'masonry',
+          filter: filterValue,
+          //sortBy: isotopeLayout.getAttribute('data-sort') || 'original-order'
+        });
+
+      // Force layout refresh to ensure content displays
+      initIsotope.layout();
+  
+        // // Wait for images to load, then initialize Isotope
+        // imagesLoaded(isotopeContainer, function() {
+        //   const initIsotope = new Isotope(isotopeContainer, {
+        //     itemSelector: '.isotope-item',
+        //     filter: filterValue,
+        //   });
+        //   // Force layout refresh to ensure content displays
+        //   initIsotope.layout();
+        // });
+      });
+    })();
+  </script> -->
+  <script>
+    (function() {
+      const urlParams = new URLSearchParams(window.location.search);
+      const filterValue = urlParams.get('filter') || '.filter-app1'; // Default to .filter-app1
+  
+      document.addEventListener('DOMContentLoaded', function() {
+        const isotopeLayout = document.querySelector('.isotope-layout');
+        const isotopeContainer = isotopeLayout.querySelector('.isotope-container');
+  
+        // Set data-default-filter (optional, for reference)
+        isotopeLayout.setAttribute('data-default-filter', filterValue);
+  
+        // Update active filter in the services list
+        const filterItems = document.querySelectorAll('.isotope-filters li');
+        filterItems.forEach(item => {
+          item.classList.remove('filter-active');
+          if (item.getAttribute('data-filter') === filterValue) {
+            item.classList.add('filter-active');
+          }
+        });
+  
+        // Initialize Isotope
+        const initIsotope = new Isotope(isotopeContainer, {
+          itemSelector: '.isotope-item',
+          layoutMode: isotopeLayout.getAttribute('data-layout') || 'masonry',
+          filter: filterValue,
+          sortBy: isotopeLayout.getAttribute('data-sort') || 'original-order'
+        });
+  
+        // Force initial layout refresh
+        initIsotope.layout();
+  
+        // Add click event handlers for filter items
+        filterItems.forEach(item => {
+          item.addEventListener('click', function() {
+            const newFilterValue = this.getAttribute('data-filter');
+  
+            // Update active filter in the list
+            filterItems.forEach(i => i.classList.remove('filter-active'));
+            this.classList.add('filter-active');
+  
+            // Apply new filter to Isotope
+            initIsotope.arrange({ filter: newFilterValue });
+  
+            // Force layout refresh to ensure content displays
+            initIsotope.layout();
+          });
+        });
+      });
+    })();
+  </script>
+  <header id="header" class="header d-flex align-items-center fixed-top">
     <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
 
       <a href="index.html" class="logo d-flex align-items-center me-auto me-lg-0">
         <!-- Uncomment the line below if you also wish to use an image logo -->
-        <!-- <img src="assets/img/logo.png" alt=""> -->
-        <h1 class="sitename">GP</h1>
-        <span>.</span>
+        <img src="assets/img/Beezy/logo1.png" alt="" style="transform: scale(8);filter: brightness(1);">
+        <!-- <h1 class="sitename">GP</h1> -->
+        <!-- <span>.</span> -->
       </a>
 
       <nav id="navmenu" class="navmenu">
         <ul>
-          <li><a href="#hero">Home<br></a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#services">Services</a></li>
-          <li><a href="#portfolio">Portfolio</a></li>
-          <li><a href="#team">Team</a></li>
-          <li class="dropdown"><a href="#"><span>Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-            <ul>
-              <li><a href="#">Dropdown 1</a></li>
-              <li class="dropdown"><a href="#"><span>Deep Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-                <ul>
-                  <li><a href="#">Deep Dropdown 1</a></li>
-                  <li><a href="#">Deep Dropdown 2</a></li>
-                  <li><a href="#">Deep Dropdown 3</a></li>
-                  <li><a href="#">Deep Dropdown 4</a></li>
-                  <li><a href="#">Deep Dropdown 5</a></li>
-                </ul>
-              </li>
-              <li><a href="#">Dropdown 2</a></li>
-              <li><a href="#">Dropdown 3</a></li>
-              <li><a href="#">Dropdown 4</a></li>
-            </ul>
-          </li>
-          <li><a href="#contact">Contact</a></li>
+          <li><a href="index.html#hero" class="active">Home<br></a></li>
+          <li><a href="index.html#about">About</a></li>
+          <li><a href="index.html#services">Services</a></li>
+          <li><a href="index.html#portfolio">NFC Cards</a></li>
+          <li><a href="index.html#portfolio">Hot Deals Kochi</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
@@ -82,7 +160,7 @@
     </div>
   </header>
 
-  <main class="main">
+  <main class="main ">
 
     <!-- Page Title -->
     <div class="page-title" data-aos="fade">
@@ -107,23 +185,27 @@
     </div><!-- End Page Title -->
 
     <!-- Service Details Section -->
-    <section id="service-details" class="service-details section">
+    <section id="service-details" class="service-details section portfolio">
 
       <div class="container">
 
-        <div class="row gy-5">
-
+        <div class="row gy-5 isotope-layout" id="service-item" data-layout="masonry" data-sort="original-order">
           <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
-
             <div class="service-box">
               <h4>Serices List</h4>
-              <div class="services-list">
-                <a href="#" class="active"><i class="bi bi-arrow-right-circle"></i><span>Web Design</span></a>
-                <a href="#"><i class="bi bi-arrow-right-circle"></i><span>Web Design</span></a>
-                <a href="#"><i class="bi bi-arrow-right-circle"></i><span>Product Management</span></a>
-                <a href="#"><i class="bi bi-arrow-right-circle"></i><span>Graphic Design</span></a>
-                <a href="#"><i class="bi bi-arrow-right-circle"></i><span>Marketing</span></a>
-              </div>
+              <ul class="services-list portfolio-filters isotope-filters">
+                <li data-filter=".filter-app1" style="width: 100%;text-align: left;" class="filter-active"><i class="bi bi-arrow-right-circle"></i><span>Social Media Growth & Handling</span></li>
+                <li data-filter=".filter-app2" style="width: 100%;text-align: left;"><i class="bi bi-arrow-right-circle"></i><span>Google List Optimization</span></li>
+                <li data-filter=".filter-app3" style="width: 100%;text-align: left;"><i class="bi bi-arrow-right-circle"></i><span>Meta Ads</span></li>
+                <li data-filter=".filter-app4" style="width: 100%;text-align: left;"><i class="bi bi-arrow-right-circle"></i><span>Content Creation & Strategy</span></li>
+                <li data-filter=".filter-app5" style="width: 100%;text-align: left;"><i class="bi bi-arrow-right-circle"></i><span>Influencer Marketing</span></li>
+                <li data-filter=".filter-app6" style="width: 100%;text-align: left;"><i class="bi bi-arrow-right-circle"></i><span>SEO</span></li>
+                <li data-filter=".filter-app7" style="width: 100%;text-align: left;"><i class="bi bi-arrow-right-circle"></i><span>Location-Based Collaborations</span></li>
+                <li data-filter=".filter-app8" style="width: 100%;text-align: left;"><i class="bi bi-arrow-right-circle"></i><span>Snapchat Ads</span></li>
+                <li data-filter=".filter-app9" style="width: 100%;text-align: left;"><i class="bi bi-arrow-right-circle"></i><span>Google Ads</span></li>
+                <li data-filter=".filter-app10" style="width: 100%;text-align: left;"><i class="bi bi-arrow-right-circle"></i><span>Marketing Consulting For Business</span></li>
+                <li data-filter=".filter-app11" style="width: 100%;text-align: left;"><i class="bi bi-arrow-right-circle"></i><span>Personal Instagram Consulting</span></li>
+              </ul>
             </div><!-- End Services List -->
 
             <div class="service-box">
@@ -143,25 +225,230 @@
 
           </div>
 
-          <div class="col-lg-8 ps-lg-5" data-aos="fade-up" data-aos-delay="200">
-            <img src="assets/img/services.jpg" alt="" class="img-fluid services-img">
-            <h3>Temporibus et in vero dicta aut eius lidero plastis trand lined voluptas dolorem ut voluptas</h3>
-            <p>
-              Blanditiis voluptate odit ex error ea sed officiis deserunt. Cupiditate non consequatur et doloremque consequuntur. Accusantium labore reprehenderit error temporibus saepe perferendis fuga doloribus vero. Qui omnis quo sit. Dolorem architecto eum et quos deleniti officia qui.
-            </p>
-            <ul>
-              <li><i class="bi bi-check-circle"></i> <span>Aut eum totam accusantium voluptatem.</span></li>
-              <li><i class="bi bi-check-circle"></i> <span>Assumenda et porro nisi nihil nesciunt voluptatibus.</span></li>
-              <li><i class="bi bi-check-circle"></i> <span>Ullamco laboris nisi ut aliquip ex ea</span></li>
-            </ul>
-            <p>
-              Est reprehenderit voluptatem necessitatibus asperiores neque sed ea illo. Deleniti quam sequi optio iste veniam repellat odit. Aut pariatur itaque nesciunt fuga.
-            </p>
-            <p>
-              Sunt rem odit accusantium omnis perspiciatis officia. Laboriosam aut consequuntur recusandae mollitia doloremque est architecto cupiditate ullam. Quia est ut occaecati fuga. Distinctio ex repellendus eveniet velit sint quia sapiente cumque. Et ipsa perferendis ut nihil. Laboriosam vel voluptates tenetur nostrum. Eaque iusto cupiditate et totam et quia dolorum in. Sunt molestiae ipsum at consequatur vero. Architecto ut pariatur autem ad non cumque nesciunt qui maxime. Sunt eum quia impedit dolore alias explicabo ea.
-            </p>
+          <div class="col-lg-8 ps-lg-5 isotope-container" data-aos="fade-up" data-aos-delay="200">
+            <!-- Service Item 1 -->
+            <div class="portfolio-item isotope-item filter-app1">
+              <img src="assets/img/services.jpg" alt="" class="img-fluid services-img">
+              <h3>Social Media Growth & Handling</h3>
+              <p>
+                  Blanditiis voluptate odit ex error ea sed officiis deserunt. Cupiditate non consequatur et doloremque consequuntur. Accusantium labore reprehenderit error temporibus saepe perferendis fuga doloribus vero. Qui omnis quo sit. Dolorem architecto eum et quos deleniti officia qui.
+              </p>
+              <ul>
+                <li><i class="bi bi-check-circle"></i> <span>Aut eum totam accusantium voluptatem.</span></li>
+                <li><i class="bi bi-check-circle"></i> <span>Assumenda et porro nisi nihil nesciunt voluptatibus.</span></li>
+                <li><i class="bi bi-check-circle"></i> <span>Ullamco laboris nisi ut aliquip ex ea</span></li>
+              </ul>
+              <p>
+                Est reprehenderit voluptatem necessitatibus asperiores neque sed ea illo. Deleniti quam sequi optio iste veniam repellat odit. Aut pariatur itaque nesciunt fuga.
+              </p>
+              <p>
+                Sunt rem odit accusantium omnis perspiciatis officia. Laboriosam aut consequuntur recusandae mollitia doloremque est architecto cupiditate ullam. Quia est ut occaecati fuga. Distinctio ex repellendus eveniet velit sint quia sapiente cumque. Et ipsa perferendis ut nihil. Laboriosam vel voluptates tenetur nostrum. Eaque iusto cupiditate et totam et quia dolorum in. Sunt molestiae ipsum at consequatur vero. Architecto ut pariatur autem ad non cumque nesciunt qui maxime. Sunt eum quia impedit dolore alias explicabo ea.
+              </p>
+            </div>
+             <!-- /Service Item 1 -->
+            <!-- Service Item 2 -->
+            <div class="portfolio-item isotope-item filter-app2">
+              <img src="assets/img/services.jpg" alt="" class="img-fluid services-img">
+              <h3>Google List Optimization</h3>
+              <p>
+                  Blanditiis voluptate odit ex error ea sed officiis deserunt. Cupiditate non consequatur et doloremque consequuntur. Accusantium labore reprehenderit error temporibus saepe perferendis fuga doloribus vero. Qui omnis quo sit. Dolorem architecto eum et quos deleniti officia qui.
+              </p>
+              <ul>
+                <li><i class="bi bi-check-circle"></i> <span>Aut eum totam accusantium voluptatem.</span></li>
+                <li><i class="bi bi-check-circle"></i> <span>Assumenda et porro nisi nihil nesciunt voluptatibus.</span></li>
+                <li><i class="bi bi-check-circle"></i> <span>Ullamco laboris nisi ut aliquip ex ea</span></li>
+              </ul>
+              <p>
+                Est reprehenderit voluptatem necessitatibus asperiores neque sed ea illo. Deleniti quam sequi optio iste veniam repellat odit. Aut pariatur itaque nesciunt fuga.
+              </p>
+              <p>
+                Sunt rem odit accusantium omnis perspiciatis officia. Laboriosam aut consequuntur recusandae mollitia doloremque est architecto cupiditate ullam. Quia est ut occaecati fuga. Distinctio ex repellendus eveniet velit sint quia sapiente cumque. Et ipsa perferendis ut nihil. Laboriosam vel voluptates tenetur nostrum. Eaque iusto cupiditate et totam et quia dolorum in. Sunt molestiae ipsum at consequatur vero. Architecto ut pariatur autem ad non cumque nesciunt qui maxime. Sunt eum quia impedit dolore alias explicabo ea.
+              </p>
+            </div>
+             <!-- /Service Item 2 -->
+              <!-- Service Item 3 -->
+            <div class="portfolio-item isotope-item filter-app3">
+              <img src="assets/img/services.jpg" alt="" class="img-fluid services-img">
+              <h3>Meta Ads</h3>
+              <p>
+                  Blanditiis voluptate odit ex error ea sed officiis deserunt. Cupiditate non consequatur et doloremque consequuntur. Accusantium labore reprehenderit error temporibus saepe perferendis fuga doloribus vero. Qui omnis quo sit. Dolorem architecto eum et quos deleniti officia qui.
+              </p>
+              <ul>
+                <li><i class="bi bi-check-circle"></i> <span>Aut eum totam accusantium voluptatem.</span></li>
+                <li><i class="bi bi-check-circle"></i> <span>Assumenda et porro nisi nihil nesciunt voluptatibus.</span></li>
+                <li><i class="bi bi-check-circle"></i> <span>Ullamco laboris nisi ut aliquip ex ea</span></li>
+              </ul>
+              <p>
+                Est reprehenderit voluptatem necessitatibus asperiores neque sed ea illo. Deleniti quam sequi optio iste veniam repellat odit. Aut pariatur itaque nesciunt fuga.
+              </p>
+              <p>
+                Sunt rem odit accusantium omnis perspiciatis officia. Laboriosam aut consequuntur recusandae mollitia doloremque est architecto cupiditate ullam. Quia est ut occaecati fuga. Distinctio ex repellendus eveniet velit sint quia sapiente cumque. Et ipsa perferendis ut nihil. Laboriosam vel voluptates tenetur nostrum. Eaque iusto cupiditate et totam et quia dolorum in. Sunt molestiae ipsum at consequatur vero. Architecto ut pariatur autem ad non cumque nesciunt qui maxime. Sunt eum quia impedit dolore alias explicabo ea.
+              </p>
+            </div>
+             <!-- /Service Item 3 -->
+              <!-- Service Item 4 -->
+            <div class="portfolio-item isotope-item filter-app4">
+              <img src="assets/img/services.jpg" alt="" class="img-fluid services-img">
+              <h3>Content Creation & Strategy</h3>
+              <p>
+                  Blanditiis voluptate odit ex error ea sed officiis deserunt. Cupiditate non consequatur et doloremque consequuntur. Accusantium labore reprehenderit error temporibus saepe perferendis fuga doloribus vero. Qui omnis quo sit. Dolorem architecto eum et quos deleniti officia qui.
+              </p>
+              <ul>
+                <li><i class="bi bi-check-circle"></i> <span>Aut eum totam accusantium voluptatem.</span></li>
+                <li><i class="bi bi-check-circle"></i> <span>Assumenda et porro nisi nihil nesciunt voluptatibus.</span></li>
+                <li><i class="bi bi-check-circle"></i> <span>Ullamco laboris nisi ut aliquip ex ea</span></li>
+              </ul>
+              <p>
+                Est reprehenderit voluptatem necessitatibus asperiores neque sed ea illo. Deleniti quam sequi optio iste veniam repellat odit. Aut pariatur itaque nesciunt fuga.
+              </p>
+              <p>
+                Sunt rem odit accusantium omnis perspiciatis officia. Laboriosam aut consequuntur recusandae mollitia doloremque est architecto cupiditate ullam. Quia est ut occaecati fuga. Distinctio ex repellendus eveniet velit sint quia sapiente cumque. Et ipsa perferendis ut nihil. Laboriosam vel voluptates tenetur nostrum. Eaque iusto cupiditate et totam et quia dolorum in. Sunt molestiae ipsum at consequatur vero. Architecto ut pariatur autem ad non cumque nesciunt qui maxime. Sunt eum quia impedit dolore alias explicabo ea.
+              </p>
+            </div>
+             <!-- /Service Item 4 -->
+              <!-- Service Item 5 -->
+            <div class="portfolio-item isotope-item filter-app5">
+              <img src="assets/img/services.jpg" alt="" class="img-fluid services-img">
+              <h3>Influencer Marketing</h3>
+              <p>
+                  Blanditiis voluptate odit ex error ea sed officiis deserunt. Cupiditate non consequatur et doloremque consequuntur. Accusantium labore reprehenderit error temporibus saepe perferendis fuga doloribus vero. Qui omnis quo sit. Dolorem architecto eum et quos deleniti officia qui.
+              </p>
+              <ul>
+                <li><i class="bi bi-check-circle"></i> <span>Aut eum totam accusantium voluptatem.</span></li>
+                <li><i class="bi bi-check-circle"></i> <span>Assumenda et porro nisi nihil nesciunt voluptatibus.</span></li>
+                <li><i class="bi bi-check-circle"></i> <span>Ullamco laboris nisi ut aliquip ex ea</span></li>
+              </ul>
+              <p>
+                Est reprehenderit voluptatem necessitatibus asperiores neque sed ea illo. Deleniti quam sequi optio iste veniam repellat odit. Aut pariatur itaque nesciunt fuga.
+              </p>
+              <p>
+                Sunt rem odit accusantium omnis perspiciatis officia. Laboriosam aut consequuntur recusandae mollitia doloremque est architecto cupiditate ullam. Quia est ut occaecati fuga. Distinctio ex repellendus eveniet velit sint quia sapiente cumque. Et ipsa perferendis ut nihil. Laboriosam vel voluptates tenetur nostrum. Eaque iusto cupiditate et totam et quia dolorum in. Sunt molestiae ipsum at consequatur vero. Architecto ut pariatur autem ad non cumque nesciunt qui maxime. Sunt eum quia impedit dolore alias explicabo ea.
+              </p>
+            </div>
+             <!-- /Service Item 5 -->
+            <!-- Service Item 6 -->
+            <div class="portfolio-item isotope-item filter-app6">
+              <img src="assets/img/services.jpg" alt="" class="img-fluid services-img">
+              <h3>SEO</h3>
+              <p>
+                  Blanditiis voluptate odit ex error ea sed officiis deserunt. Cupiditate non consequatur et doloremque consequuntur. Accusantium labore reprehenderit error temporibus saepe perferendis fuga doloribus vero. Qui omnis quo sit. Dolorem architecto eum et quos deleniti officia qui.
+              </p>
+              <ul>
+                <li><i class="bi bi-check-circle"></i> <span>Aut eum totam accusantium voluptatem.</span></li>
+                <li><i class="bi bi-check-circle"></i> <span>Assumenda et porro nisi nihil nesciunt voluptatibus.</span></li>
+                <li><i class="bi bi-check-circle"></i> <span>Ullamco laboris nisi ut aliquip ex ea</span></li>
+              </ul>
+              <p>
+                Est reprehenderit voluptatem necessitatibus asperiores neque sed ea illo. Deleniti quam sequi optio iste veniam repellat odit. Aut pariatur itaque nesciunt fuga.
+              </p>
+              <p>
+                Sunt rem odit accusantium omnis perspiciatis officia. Laboriosam aut consequuntur recusandae mollitia doloremque est architecto cupiditate ullam. Quia est ut occaecati fuga. Distinctio ex repellendus eveniet velit sint quia sapiente cumque. Et ipsa perferendis ut nihil. Laboriosam vel voluptates tenetur nostrum. Eaque iusto cupiditate et totam et quia dolorum in. Sunt molestiae ipsum at consequatur vero. Architecto ut pariatur autem ad non cumque nesciunt qui maxime. Sunt eum quia impedit dolore alias explicabo ea.
+              </p>
+            </div>
+             <!-- /Service Item 6 -->
+              
+              <!-- Service Item 7 -->
+            <div class="portfolio-item isotope-item filter-app7">
+              <img src="assets/img/services.jpg" alt="" class="img-fluid services-img">
+              <h3>Location-Based Collaborations</h3>
+              <p>
+                  Blanditiis voluptate odit ex error ea sed officiis deserunt. Cupiditate non consequatur et doloremque consequuntur. Accusantium labore reprehenderit error temporibus saepe perferendis fuga doloribus vero. Qui omnis quo sit. Dolorem architecto eum et quos deleniti officia qui.
+              </p>
+              <ul>
+                <li><i class="bi bi-check-circle"></i> <span>Aut eum totam accusantium voluptatem.</span></li>
+                <li><i class="bi bi-check-circle"></i> <span>Assumenda et porro nisi nihil nesciunt voluptatibus.</span></li>
+                <li><i class="bi bi-check-circle"></i> <span>Ullamco laboris nisi ut aliquip ex ea</span></li>
+              </ul>
+              <p>
+                Est reprehenderit voluptatem necessitatibus asperiores neque sed ea illo. Deleniti quam sequi optio iste veniam repellat odit. Aut pariatur itaque nesciunt fuga.
+              </p>
+              <p>
+                Sunt rem odit accusantium omnis perspiciatis officia. Laboriosam aut consequuntur recusandae mollitia doloremque est architecto cupiditate ullam. Quia est ut occaecati fuga. Distinctio ex repellendus eveniet velit sint quia sapiente cumque. Et ipsa perferendis ut nihil. Laboriosam vel voluptates tenetur nostrum. Eaque iusto cupiditate et totam et quia dolorum in. Sunt molestiae ipsum at consequatur vero. Architecto ut pariatur autem ad non cumque nesciunt qui maxime. Sunt eum quia impedit dolore alias explicabo ea.
+              </p>
+            </div>
+             <!-- /Service Item 7 -->
+              <!-- Service Item 8 -->
+            <div class="portfolio-item isotope-item filter-app8">
+              <img src="assets/img/services.jpg" alt="" class="img-fluid services-img">
+              <h3>Snapchat Ads</h3>
+              <p>
+                  Blanditiis voluptate odit ex error ea sed officiis deserunt. Cupiditate non consequatur et doloremque consequuntur. Accusantium labore reprehenderit error temporibus saepe perferendis fuga doloribus vero. Qui omnis quo sit. Dolorem architecto eum et quos deleniti officia qui.
+              </p>
+              <ul>
+                <li><i class="bi bi-check-circle"></i> <span>Aut eum totam accusantium voluptatem.</span></li>
+                <li><i class="bi bi-check-circle"></i> <span>Assumenda et porro nisi nihil nesciunt voluptatibus.</span></li>
+                <li><i class="bi bi-check-circle"></i> <span>Ullamco laboris nisi ut aliquip ex ea</span></li>
+              </ul>
+              <p>
+                Est reprehenderit voluptatem necessitatibus asperiores neque sed ea illo. Deleniti quam sequi optio iste veniam repellat odit. Aut pariatur itaque nesciunt fuga.
+              </p>
+              <p>
+                Sunt rem odit accusantium omnis perspiciatis officia. Laboriosam aut consequuntur recusandae mollitia doloremque est architecto cupiditate ullam. Quia est ut occaecati fuga. Distinctio ex repellendus eveniet velit sint quia sapiente cumque. Et ipsa perferendis ut nihil. Laboriosam vel voluptates tenetur nostrum. Eaque iusto cupiditate et totam et quia dolorum in. Sunt molestiae ipsum at consequatur vero. Architecto ut pariatur autem ad non cumque nesciunt qui maxime. Sunt eum quia impedit dolore alias explicabo ea.
+              </p>
+            </div>
+             <!-- /Service Item 8 -->
+              <!-- Service Item 9 -->
+            <div class="portfolio-item isotope-item filter-app9">
+              <img src="assets/img/services.jpg" alt="" class="img-fluid services-img">
+              <h3>Google Ads</h3>
+              <p>
+                  Blanditiis voluptate odit ex error ea sed officiis deserunt. Cupiditate non consequatur et doloremque consequuntur. Accusantium labore reprehenderit error temporibus saepe perferendis fuga doloribus vero. Qui omnis quo sit. Dolorem architecto eum et quos deleniti officia qui.
+              </p>
+              <ul>
+                <li><i class="bi bi-check-circle"></i> <span>Aut eum totam accusantium voluptatem.</span></li>
+                <li><i class="bi bi-check-circle"></i> <span>Assumenda et porro nisi nihil nesciunt voluptatibus.</span></li>
+                <li><i class="bi bi-check-circle"></i> <span>Ullamco laboris nisi ut aliquip ex ea</span></li>
+              </ul>
+              <p>
+                Est reprehenderit voluptatem necessitatibus asperiores neque sed ea illo. Deleniti quam sequi optio iste veniam repellat odit. Aut pariatur itaque nesciunt fuga.
+              </p>
+              <p>
+                Sunt rem odit accusantium omnis perspiciatis officia. Laboriosam aut consequuntur recusandae mollitia doloremque est architecto cupiditate ullam. Quia est ut occaecati fuga. Distinctio ex repellendus eveniet velit sint quia sapiente cumque. Et ipsa perferendis ut nihil. Laboriosam vel voluptates tenetur nostrum. Eaque iusto cupiditate et totam et quia dolorum in. Sunt molestiae ipsum at consequatur vero. Architecto ut pariatur autem ad non cumque nesciunt qui maxime. Sunt eum quia impedit dolore alias explicabo ea.
+              </p>
+            </div>
+             <!-- /Service Item 9 -->
+              <!-- Service Item 10 -->
+            <div class="portfolio-item isotope-item filter-app10">
+              <img src="assets/img/services.jpg" alt="" class="img-fluid services-img">
+              <h3>Marketing Consulting For Business</h3>
+              <p>
+                  Blanditiis voluptate odit ex error ea sed officiis deserunt. Cupiditate non consequatur et doloremque consequuntur. Accusantium labore reprehenderit error temporibus saepe perferendis fuga doloribus vero. Qui omnis quo sit. Dolorem architecto eum et quos deleniti officia qui.
+              </p>
+              <ul>
+                <li><i class="bi bi-check-circle"></i> <span>Aut eum totam accusantium voluptatem.</span></li>
+                <li><i class="bi bi-check-circle"></i> <span>Assumenda et porro nisi nihil nesciunt voluptatibus.</span></li>
+                <li><i class="bi bi-check-circle"></i> <span>Ullamco laboris nisi ut aliquip ex ea</span></li>
+              </ul>
+              <p>
+                Est reprehenderit voluptatem necessitatibus asperiores neque sed ea illo. Deleniti quam sequi optio iste veniam repellat odit. Aut pariatur itaque nesciunt fuga.
+              </p>
+              <p>
+                Sunt rem odit accusantium omnis perspiciatis officia. Laboriosam aut consequuntur recusandae mollitia doloremque est architecto cupiditate ullam. Quia est ut occaecati fuga. Distinctio ex repellendus eveniet velit sint quia sapiente cumque. Et ipsa perferendis ut nihil. Laboriosam vel voluptates tenetur nostrum. Eaque iusto cupiditate et totam et quia dolorum in. Sunt molestiae ipsum at consequatur vero. Architecto ut pariatur autem ad non cumque nesciunt qui maxime. Sunt eum quia impedit dolore alias explicabo ea.
+              </p>
+            </div>
+             <!-- /Service Item 10 -->
+              <!-- Service Item 11 -->
+            <div class="portfolio-item isotope-item filter-app11">
+              <img src="assets/img/services.jpg" alt="" class="img-fluid services-img">
+              <h3>Personal Instagram Consulting</h3>
+              <p>
+                  Blanditiis voluptate odit ex error ea sed officiis deserunt. Cupiditate non consequatur et doloremque consequuntur. Accusantium labore reprehenderit error temporibus saepe perferendis fuga doloribus vero. Qui omnis quo sit. Dolorem architecto eum et quos deleniti officia qui.
+              </p>
+              <ul>
+                <li><i class="bi bi-check-circle"></i> <span>Aut eum totam accusantium voluptatem.</span></li>
+                <li><i class="bi bi-check-circle"></i> <span>Assumenda et porro nisi nihil nesciunt voluptatibus.</span></li>
+                <li><i class="bi bi-check-circle"></i> <span>Ullamco laboris nisi ut aliquip ex ea</span></li>
+              </ul>
+              <p>
+                Est reprehenderit voluptatem necessitatibus asperiores neque sed ea illo. Deleniti quam sequi optio iste veniam repellat odit. Aut pariatur itaque nesciunt fuga.
+              </p>
+              <p>
+                Sunt rem odit accusantium omnis perspiciatis officia. Laboriosam aut consequuntur recusandae mollitia doloremque est architecto cupiditate ullam. Quia est ut occaecati fuga. Distinctio ex repellendus eveniet velit sint quia sapiente cumque. Et ipsa perferendis ut nihil. Laboriosam vel voluptates tenetur nostrum. Eaque iusto cupiditate et totam et quia dolorum in. Sunt molestiae ipsum at consequatur vero. Architecto ut pariatur autem ad non cumque nesciunt qui maxime. Sunt eum quia impedit dolore alias explicabo ea.
+              </p>
+            </div>
+             <!-- /Service Item 11 -->
           </div>
-
+         
         </div>
 
       </div>
@@ -177,13 +464,14 @@
         <div class="row gy-4">
           <div class="col-lg-4 col-md-6 footer-about">
             <a href="index.html" class="logo d-flex align-items-center">
-              <span class="sitename">GP</span>
+              <img src="assets/img/Beezy/logo1.png" alt="" style="transform: scale(8);filter: brightness(1);">
+
             </a>
             <div class="footer-contact pt-3">
-              <p>A108 Adam Street</p>
-              <p>New York, NY 535022</p>
+              <p>Kochi</p>
+              <p>India</p>
               <p class="mt-3"><strong>Phone:</strong> <span>+1 5589 55488 55</span></p>
-              <p><strong>Email:</strong> <span>info@example.com</span></p>
+              <p><strong>Email:</strong> <span>test@gmail.com</span></p>
             </div>
             <div class="social-links d-flex mt-4">
               <a href=""><i class="bi bi-twitter-x"></i></a>
@@ -207,11 +495,11 @@
           <div class="col-lg-2 col-md-3 footer-links">
             <h4>Our Services</h4>
             <ul>
-              <li><i class="bi bi-chevron-right"></i> <a href="#"> Web Design</a></li>
-              <li><i class="bi bi-chevron-right"></i> <a href="#"> Web Development</a></li>
-              <li><i class="bi bi-chevron-right"></i> <a href="#"> Product Management</a></li>
-              <li><i class="bi bi-chevron-right"></i> <a href="#"> Marketing</a></li>
-              <li><i class="bi bi-chevron-right"></i> <a href="#"> Graphic Design</a></li>
+              <li><i class="bi bi-chevron-right"></i> <a href="#"> SEO</a></li>
+              <li><i class="bi bi-chevron-right"></i> <a href="#"> Google Ads</a></li>
+              <li><i class="bi bi-chevron-right"></i> <a href="#"> Content Creation</a></li>
+              <li><i class="bi bi-chevron-right"></i> <a href="#"> Personal Instagram Consulting</a></li>
+              <li><i class="bi bi-chevron-right"></i> <a href="#"> Social Media Growth & Handling</a></li>
             </ul>
           </div>
 
@@ -230,18 +518,7 @@
       </div>
     </div>
 
-    <div class="copyright">
-      <div class="container text-center">
-        <p>© <span>Copyright</span> <strong class="px-1 sitename">GP</strong> <span>All Rights Reserved</span></p>
-        <div class="credits">
-          <!-- All the links in the footer should remain intact. -->
-          <!-- You can delete the links only if you've purchased the pro version. -->
-          <!-- Licensing information: https://bootstrapmade.com/license/ -->
-          <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
-          Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a> Distributed by <a href="https://themewagon.com">ThemeWagon</a>
-        </div>
-      </div>
-    </div>
+    
 
   </footer>
 
@@ -263,6 +540,43 @@
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
+
+<!-- <script>
+  document.addEventListener('DOMContentLoaded', function() {
+    // Get filter from URL
+    const urlParams = new URLSearchParams(window.location.search);
+    const filterValue = urlParams.get('filter') || '.filter-app1'; // Default to .filter-app1
+
+    // Initialize Isotope (this might already be in main.js, so we’ll just update the filter)
+    const isoContainer = document.querySelector('.isotope-container');
+    const iso = new Isotope(isoContainer, {
+      itemSelector: '.isotope-item',
+      layoutMode: 'masonry'
+    });
+
+    // Apply the filter from URL
+    iso.arrange({ filter: filterValue });
+
+    // Update active filter in the list
+    const filterItems = document.querySelectorAll('.isotope-filters li');
+    filterItems.forEach(item => {
+      item.classList.remove('filter-active');
+      if (item.getAttribute('data-filter') === filterValue) {
+        item.classList.add('filter-active');
+      }
+    });
+
+    // Ensure click events work (might already be in main.js, but adding here for completeness)
+    filterItems.forEach(item => {
+      item.addEventListener('click', function() {
+        const filter = this.getAttribute('data-filter');
+        iso.arrange({ filter: filter });
+        filterItems.forEach(i => i.classList.remove('filter-active'));
+        this.classList.add('filter-active');
+      });
+    });
+  });
+</script> -->
 
 </body>
 
