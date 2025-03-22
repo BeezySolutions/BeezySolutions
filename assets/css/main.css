@@ -1756,3 +1756,75 @@ section,
   height: 4rem;
   margin-bottom: 2rem;
 }
+
+
+/* Careers Section */
+.careers .career-item {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
+  height: 100%; /* Ensure consistent height */
+}
+
+.careers .career-item h3 {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: #151515;
+}
+
+.careers .career-item p {
+  font-size: 14px;
+  color: #6c757d;
+  margin-bottom: 15px;
+}
+
+.careers .career-details {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 15px;
+}
+
+.careers .career-details li {
+  font-size: 14px;
+  color: #444444;
+  margin-bottom: 5px;
+}
+
+.careers .career-details li strong {
+  color: #151515;
+}
+
+.careers .apply-link {
+  display: inline-block;
+  font-weight: 600;
+  color: #ff4a17; /* Matches your theme’s accent color */
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.careers .apply-link:hover {
+  color: #e03a00; /* Darker shade on hover */
+}
+
+.careers .career-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.careers .no-openings {
+  font-size: 16px;
+  color: #6c757d;
+  margin-top: 20px;
+}
+
+.careers .no-openings a {
+  color: #ff4a17;
+  text-decoration: none;
+}
+
+.careers .no-openings a:hover {
+  color: #e03a00;
+}
