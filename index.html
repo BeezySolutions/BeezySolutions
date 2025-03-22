@@ -983,7 +983,7 @@
     </div><!-- End Google Maps -->
 
     <div class="row gy-4">
-      <div class="col-lg-4">
+      <div class="col-lg-5">
         <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="300">
           <i class="bi bi-geo-alt flex-shrink-0"></i>
           <div>
@@ -1007,9 +1007,17 @@
             <p>info@example.com</p>
           </div>
         </div><!-- End Info Item -->
+        
+        <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="500">
+          <a href=""><i class="bi bi-instagram flex-shrink-0"></i></a>
+          <a href=""><i class="bi bi-facebook flex-shrink-0"></i></a>
+          <a href=""><i class="bi bi-whatsapp flex-shrink-0"></i></a>
+          <a href=""><i class="bi bi-linkedin flex-shrink-0"></i></a>
+          <a href=""><i class="bi bi-whatsapp" style="width: fit-content;padding: 0px 10px 0px 10px;">&nbsp;&nbsp;Chat Now</i></a>
+        </div><!-- End Info Item -->
       </div>
 
-      <div class="col-lg-8">
+      <div class="col-lg-7">
         <form id="contact-form" class="php-email-form" data-aos="fade-up" data-aos-delay="200" action="">
           <div class="row gy-4">
             <div class="col-md-6">
@@ -1174,6 +1182,59 @@
   })();
 </script>
 
+<!-- WhatsApp Integration Script 
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const form = document.getElementById('whatsapp-contact-form');
+    const loading = form.querySelector('.loading');
+    const errorMessage = form.querySelector('.error-message');
+    const sentMessage = form.querySelector('.sent-message');
+
+    form.addEventListener('submit', function(event) {
+      event.preventDefault(); // Prevent default form submission
+
+      // Show loading state
+      loading.style.display = 'block';
+      errorMessage.style.display = 'none';
+      sentMessage.style.display = 'none';
+
+      // Collect form data
+      const name = form.name.value;
+      const email = form.email.value;
+      const subject = form.subject.value;
+      const message = form.message.value;
+
+      // Your WhatsApp number (with country code, no plus sign or spaces, e.g., 12025550123)
+      const phoneNumber = 'YOUR_PHONE_NUMBER'; // Replace with your WhatsApp number
+
+      // Construct the message
+      const whatsappMessage = `New Contact Form Submission\n\n` +
+                             `Name: ${name}\n` +
+                             `Email: ${email}\n` +
+                             `Subject: ${subject}\n` +
+                             `Message: ${message}`;
+
+      // Encode the message for URL
+      const encodedMessage = encodeURIComponent(whatsappMessage);
+
+      // Construct the wa.me URL
+      const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
+
+      // Hide loading and show success message
+      setTimeout(() => {
+        loading.style.display = 'none';
+        sentMessage.style.display = 'block';
+
+        // Redirect to WhatsApp after a short delay (optional: remove delay if not needed)
+        setTimeout(() => {
+          window.open(whatsappUrl, '_blank'); // Opens WhatsApp in a new tab
+          form.reset(); // Reset the form
+        }, 1000); // 1-second delay for user to see success message
+      }, 500); // Simulate a slight delay for loading effect
+    });
+  });
+</script>
+-->
 </body>
 
 </html>
