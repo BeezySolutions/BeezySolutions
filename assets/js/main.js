@@ -91,6 +91,21 @@
   window.addEventListener('load', toggleScrollTop);
   document.addEventListener('scroll', toggleScrollTop);
 
+
+  /**
+   * Whatsapp button
+   */
+  let whatsapp = document.querySelector('.whatsapp');
+
+  function toggleWhatsapp() {
+    if (whatsapp) {
+      window.scrollY > 100 ? whatsapp.classList.add('active') : whatsapp.classList.remove('active');
+    }
+  }
+
+  // window.addEventListener('load', toggleWhatsapp);
+  document.addEventListener('scroll', toggleWhatsapp);
+
   /**
    * Animation on scroll function and init
    */
@@ -209,3 +224,4 @@
   document.addEventListener('scroll', navmenuScrollspy);
 
 })();
+

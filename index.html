@@ -48,6 +48,8 @@
   <!-- Vendor CSS Files -->
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-thin-straight/css/uicons-thin-straight.css'>
+  <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-thin-rounded/css/uicons-thin-rounded.css'>
   <link href="assets/vendor/aos/aos.css" rel="stylesheet">
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
@@ -79,13 +81,56 @@
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
 
-      <a class="btn-getstarted" href="index.html#about">Get Started</a>
+      <!-- <a class="btn-getstarted" href="index.html#contact">Get a Quote</a> -->
 
+      <!-- Button trigger modal -->
+      <a type="button" class="btn-getstarted" data-bs-toggle="modal" data-bs-target="#quote">
+        Get a Quote
+      </a>
     </div>
   </header>
 
   <main class="main">
-
+    <!-- Modal -->
+    <div class="modal fade" id="quote" tabindex="-1" aria-labelledby="Quote" aria-hidden="true" style="z-index: 9999;">
+      <div class="modal-dialog modal-dialog-centered  ">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="">Get a Quote</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <form id="quote-form" class="php-email-form" action="">
+            <div class="modal-body">
+              <div class="row gy-4">
+                <div class="col-md-12">
+                  <input type="text" name="name" id="name" class="form-control" placeholder="Your Name" required>
+                </div>
+                <div class="col-md-12">
+                  <input type="text" class="form-control" name="phone" id="phone" placeholder="Phone Number" required>
+                </div>
+                <div class="col-md-12">
+                  <input type="text " class="form-control" name="company" id="company" placeholder="Company Name" required>
+                </div>
+                <div class="col-md-12">
+                  <input type="text" class="form-control" name="country" id="country" placeholder="Country" required>
+                </div>
+                <div class="col-md-12 text-center">
+                  <div class="q-loading">Loading</div>
+                  <div class="q-error-message"></div>
+                  <div class="q-sent-message">Your message has been sent. Thank you!</div>
+                  <!-- <button type="submit">Send Message</button> -->
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              <button type="submit" class="btn btn-primary">SEND</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <!-- Modal End-->
     <!-- Hero Section -->
     <section id="hero" class="hero section dark-background">
 
@@ -104,31 +149,31 @@
           <div class="col-xl-2 col-md-4" data-aos="fade-up" data-aos-delay="300">
             <div class="icon-box">
               <i class="bi bi-binoculars"></i>
-              <h3><a href="">SEO</a></h3>
+              <h3><a href="">Digital Marketing</a></h3>
             </div>
           </div>
+            <div class="col-xl-2 col-md-4" data-aos="fade-up" data-aos-delay="500">
+              <div class="icon-box">
+                <i class="bi bi-camera-reels"></i>
+                <h3><a href="">Video Production</a></h3>
+              </div>
+            </div>
           <div class="col-xl-2 col-md-4" data-aos="fade-up" data-aos-delay="400">
             <div class="icon-box">
               <i class="bi bi-bullseye"></i>
-              <h3><a href="">Meta Ads</a></h3>
-            </div>
-          </div>
-          <div class="col-xl-2 col-md-4" data-aos="fade-up" data-aos-delay="500">
-            <div class="icon-box">
-              <i class="bi bi-camera-reels"></i>
-              <h3><a href="">Video Production</a></h3>
+              <h3><a href="">Consulting</a></h3>
             </div>
           </div>
           <div class="col-xl-2 col-md-4" data-aos="fade-up" data-aos-delay="600">
             <div class="icon-box">
-              <i class="bi bi-card-list"></i>
-              <h3><a href="">Marketing Consulting</a></h3>
+              <i class="fi fi-ts-nfc"></i>
+              <h3><a href="">NFC Cards</a></h3>
             </div>
           </div>
           <div class="col-xl-2 col-md-4" data-aos="fade-up" data-aos-delay="700">
             <div class="icon-box">
-              <i class="bi bi-gem"></i>
-              <h3><a href="">Influencer Marketting</a></h3>
+              <!-- <i class="bi bi-gem"></i> --><i class="fi fi-ts-flame"></i>
+              <h3><a href="">Hot Deals Kochi</a></h3>
             </div>
           </div>
         </div>
@@ -151,8 +196,10 @@
               <p>BEEZY SOLUTIONS</p>
             </div>
             <!-- End Section Title -->
-            <p class="mb-4">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos erat ipsum et lorem et sit, sed stet lorem sit.</p>
-            <p class="mb-4">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo magna dolore erat amet</p>
+            <p class="mb-4">Helping Businesses & Individuals Elevate Their Growth!
+              At Beezy Solutions, we specialize in empowering businesses and individuals to grow their social media presence, enhance digital marketing strategies, and maximize brand reach. Our expertise lies in Social Media Growth, Video Production, Business Consulting, and Digital Advertising, ensuring that your brand stands out in today’s competitive digital landscape.
+              </p>
+            <p class="mb-4">With a passion for innovation and a results-driven approach, we provide customized solutions tailored to your unique goals. Whether you’re looking to increase engagement, boost sales, or establish a strong online presence, we are here to help you succeed.</p>
           </div>
         </div>
       </div>
@@ -163,11 +210,11 @@
               <div class="icon">
                 <i class="bi bi-rocket-takeoff"></i>
               </div>
-              <a href="" class="stretched-link">
+              <a class="stretched-link">
                 <h3>Our Mission</h3>
               </a>
-              <p>Cumque et suscipit saepe. Est maiores autem enim facilis ut aut ipsam corporis aut. Sed animi at autem alias eius labore.</p>
-              <a href="" class="stretched-link"></a>
+              <p>At Beezy Solutions, our mission is to empower businesses and individuals by providing innovative digital solutions that drive growth, engagement, and success. We aim to help brands establish a strong online presence, optimize their marketing strategies, and achieve their business goals through expert guidance, creative content, and data-driven strategies.</p>
+              <!-- <a href="" class="stretched-link"></a> -->
             </div>
           </div>
           <div class="col-lg-6 col-md-6" data-aos="fade-up" data-aos-delay="500">
@@ -175,11 +222,11 @@
               <div class="icon">
                 <i class="bi bi-eye"></i>
               </div>
-              <a href="" class="stretched-link">
+              <a  class="stretched-link">
                 <h3>Our Vision</h3>
               </a>
-              <p>Cumque et suscipit saepe. Est maiores autem enim facilis ut aut ipsam corporis aut. Sed animi at autem alias eius labore.</p>
-              <a href="" class="stretched-link"></a>
+              <p>Our vision is to become a leading digital solutions provider that transforms businesses by delivering effective, result-oriented, and future-proof marketing strategies. We strive to build a community of thriving brands, helping them stay ahead in the ever-evolving digital landscape while making a lasting impact.</p>
+              <!-- <a href="" class="stretched-link"></a> -->
             </div>
           </div>
         </div>
@@ -193,38 +240,38 @@
 
       <div class="container">
         <div class="container mb-0 mt-0 section-title" data-aos="fade-up">
-          <h2 style="color: black !important;font-size: 25px;font-weight: 700; padding-bottom: 30px !important;">Why Choose Us</h2>
+          <h2 style="color: black !important;font-size: 25px;font-weight: 700; padding-bottom: 30px !important;text-transform: none;" >Why Choose Us ?</h2>
         </div>
         <div class="row gy-4">
             <div class="features-item d-flex ps-0 ps-lg-3 pt-4 pt-lg-0 col-lg-6" data-aos="fade-up" data-aos-delay="200">
-              <i class="bi bi-archive flex-shrink-0"></i>
+              <i class="fi fi-ts-plan flex-shrink-0"></i>
               <div>
-                <h4>Est labore ad</h4>
-                <p>Consequuntur sunt aut quasi enim aliquam quae harum pariatur laboris nisi ut aliquip</p>
+                <h4>Tailored Plans for Your Requirements</h4>
+                <p>We understand that every business is unique. Our strategies are fully customized to meet your specific goals and industry needs.</p>
               </div>
             </div><!-- End Features Item-->
 
             <div class="features-item d-flex mt-5 ps-0 ps-lg-3 col-lg-6" data-aos="fade-up" data-aos-delay="300">
-              <i class="bi bi-basket flex-shrink-0"></i>
+              <i class="fi fi-tr-career-growth flex-shrink-0"></i>
               <div>
-                <h4>Harum esse qui</h4>
-                <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt</p>
+                <h4>Proven Growth Strategies</h4>
+                <p>With our expert-driven approach, we help businesses and individuals grow their social media presence, increase engagement, and boost sales.</p>
               </div>
             </div><!-- End Features Item-->
 
             <div class="features-item d-flex mt-5 ps-0 ps-lg-3 col-lg-6" data-aos="fade-up" data-aos-delay="400">
               <i class="bi bi-broadcast flex-shrink-0"></i>
               <div>
-                <h4>Aut occaecati</h4>
-                <p>Aut suscipit aut cum nemo deleniti aut omnis. Doloribus ut maiores omnis facere</p>
+                <h4>End-to-End Digital Solutions</h4>
+                <p>From content creation and influencer marketing to SEO and paid ads, we offer a complete suite of services to ensure your brand’s success.</p>
               </div>
             </div><!-- End Features Item-->
 
             <div class="features-item d-flex mt-5 ps-0 ps-lg-3 col-lg-6" data-aos="fade-up" data-aos-delay="500">
-              <i class="bi bi-camera-reels flex-shrink-0"></i>
+              <i class="fi fi-tr-dashboard-monitor flex-shrink-0"></i>
               <div>
-                <h4>Beatae veritatis</h4>
-                <p>Expedita veritatis consequuntur nihil tempore laudantium vitae denat pacta</p>
+                <h4>Data-Driven & Result-Oriented</h4>
+                <p>We focus on strategies backed by analytics, ensuring that every decision we make helps maximize your ROI and business growth.</p>
               </div>
             </div><!-- End Features Item-->
         </div>
@@ -241,7 +288,7 @@
         <p>Check our Services</p>
       </div>
       <div class="container">
-        <div class="isotope-layout" data-default-filter="*" data-layout="fitRows" data-sort="original-order">
+        <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
           <ul class="portfolio-filters isotope-filters" data-aos="fade-up" data-aos-delay="100">
             <li data-filter="*" class="filter-active">All</li>
             <li data-filter=".filter-app">Digital Marketing</li>
@@ -258,21 +305,9 @@
                 <a href="service-details.html?filter=.filter-app1" class="stretched-link">
                   <h3>Social Media Growth and Handling</h3>
                 </a>
-                <p>Focuses on increasing brand engagement and followers across social media platforms through strategic content and community management.</p>
+                <p>Boost your brand’s presence on Instagram, Facebook, and other platforms with <b> strategic content, engagement tactics, and audience growth techniques </b>to increase followers and drive sales.</p>
               </div>
             </div>
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app" data-aos="fade-up" data-aos-delay="200">
-              <div class="service-item position-relative">
-                <div class="icon" style="background-color: white;">
-                  <!-- <i class="bi bi-activity"></i> -->
-                  <img src="assets/img/Beezy/Icons/optimization.png" class="icon2 mb-1"/>
-                </div>
-                <a href="service-details.html?filter=.filter-app2" class="stretched-link">
-                  <h3>Google Listing Optimization</h3>
-                </a>
-                <p>Enhances your Google My Business listing to improve visibility and attract local customers.</p>
-              </div>
-            </div>          
             <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app" data-aos="fade-up" data-aos-delay="200">
               <div class="service-item position-relative">
                 <div class="icon" style="background-color: white;">
@@ -280,9 +315,9 @@
                   <img src="assets/img/Beezy/Icons/ads (1).png" class="icon2 mb-1"/>
                 </div>
                 <a href="service-details.html?filter=.filter-app3" class="stretched-link">
-                  <h3>Meta Ads</h3>
+                  <h3>Meta Ads (Facebook, Instagram, WhatsApp)</h3>
                 </a>
-                <p>Creates targeted ad campaigns on Facebook and Instagram to boost engagement and drive conversions.</p>
+                <p>Run <b>high-performing ad campaigns</b> on Facebook, Instagram, and WhatsApp to reach your target audience, increase conversions, and maximize your return on investment (ROI).</p>
               </div>
             </div>
             <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app" data-aos="fade-up" data-aos-delay="200">
@@ -294,10 +329,22 @@
                 <a href="service-details.html?filter=.filter-app4" class="stretched-link">
                   <h3>Content Creation & Strategy</h3>
                 </a>
-                <p>Develops engaging content and a strategic plan to effectively reach and engage your target audience</p>
+                <p>Create <b> engaging, high-quality content</b> that resonates with your audience. We provide tailored content strategies to <b> increase reach, engagement, and brand visibility </b>.</p>
               </div>
             </div><!-- End Service Item -->
-
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app" data-aos="fade-up" data-aos-delay="200">
+              <div class="service-item position-relative">
+                <div class="icon" style="background-color: white;">
+                  <!-- <i class="bi bi-activity"></i> -->
+                  <img src="assets/img/Beezy/Icons/search-engine-optimization.png" class="icon2 mb-1"/>
+                </div>
+                <a href="service-details.html?filter=.filter-app6" class="stretched-link">
+                  <h3>SEO (Search Engine Optimization)</h3>
+                </a>
+                <p>Improve your <b>website’s ranking on Google </b> expert SEO strategies, including <b>keyword optimization, on-page and off-page SEO, and content SEO </b>to attract organic traffic.</p>
+              </div>
+            </div><!-- End Service Item -->
+                   
             <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app" data-aos="fade-up" data-aos-delay="200">
               <div class="service-item position-relative">
                 <div class="icon" style="background-color: white;">
@@ -307,74 +354,7 @@
                 <a href="service-details.html?filter=.filter-app5" class="stretched-link">
                   <h3>Influencer Marketing</h3>
                 </a>
-                <p>Leverages partnerships with influencers to promote your brand and reach targeted audiences effectively.</p>
-              </div>
-            </div><!-- End Service Item -->
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app" data-aos="fade-up" data-aos-delay="200">
-              <div class="service-item position-relative">
-                <div class="icon" style="background-color: white;">
-                  <!-- <i class="bi bi-activity"></i> -->
-                  <img src="assets/img/Beezy/Icons/search-engine-optimization.png" class="icon2 mb-1"/>
-                </div>
-                <a href="service-details.html?filter=.filter-app6" class="stretched-link">
-                  <h3>SEO</h3>
-                </a>
-                <p>Improves your website's visibility on search engines to drive organic traffic through keyword optimization and content strategies.</p>
-              </div>
-            </div><!-- End Service Item -->
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app" data-aos="fade-up" data-aos-delay="200">
-              <div class="service-item position-relative">
-                <div class="icon" style="background-color: white;">
-                  <!-- <i class="bi bi-activity"></i> -->
-                  <img src="assets/img/Beezy/Icons/location.png" class="icon2 mb-1"/>
-                </div>
-                <a href="service-details.html?filter=.filter-app7" class="stretched-link">
-                  <h3>Location-Based Collaborations</h3>
-                </a>
-                <p>Fosters partnerships with local businesses to enhance community engagement and drive mutual growth.</p>
-              </div>
-            </div><!-- End Service Item -->
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app" data-aos="fade-up" data-aos-delay="200">
-              <div class="service-item position-relative">
-                <div class="icon" style="background-color: white;">
-                  <!-- <i class="bi bi-activity"></i> -->
-                  <img src="assets/img/Beezy/Icons/ads.png" class="icon2 mb-1"/>
-                </div>
-                <a href="service-details.html?filter=.filter-app8" class="stretched-link">
-                  <h3>Snapchat Ads</h3>
-                </a>
-                <p>Creates engaging, full-screen ads on Snapchat to reach and connect with a younger audience effectively.</p>
-                <a href="service-details.html?filter=.filter-app8" class="stretched-link"></a>
-              </div>
-            </div><!-- End Service Item -->
-
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app" data-aos="fade-up" data-aos-delay="200">
-              <div class="service-item position-relative">
-                <div class="icon" style="background-color: white;">
-                  <!-- <i class="bi bi-activity"></i> -->
-                  <img src="assets/img/Beezy/Icons/adwords.png" class="icon2 mb-1"/>
-                </div>
-                <a href="service-details.html?filter=.filter-app9" class="stretched-link">
-                  <h3>Google Ads</h3>
-                </a>
-                <p>Utilizes targeted pay-per-click advertising to increase visibility and drive traffic to your website through search and display networks.</p>
-                <a href="service-details.html?filter=.filter-app9" class="stretched-link"></a>
-              </div>
-            </div><!-- End Service Item -->
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
-              <div class="service-item position-relative">
-                <div class="icon" style="background-color: white;">
-                  <!-- <i class="bi bi-activity"></i> -->
-                  <img src="assets/img/Beezy/Icons/content-marketing (1).png" class="icon2 mb-1"/>
-                </div>
-                <a href="service-details.html?filter=.filter-app10" class="stretched-link">
-                  <h3>Marketing Consulting For Business</h3>
-                </a>
-                <p> Provides expert guidance to develop effective marketing strategies and improve overall business performance.</p>
-                <a href="service-details.html?filter=.filter-app10" class="stretched-link"></a>
+                <p>Collaborate with the <b> right influencers </b> expand your brand’s reach, build trust, and drive targeted engagement that leads to <b> higher conversions</b></p>
               </div>
             </div><!-- End Service Item -->
             <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
@@ -386,10 +366,79 @@
                 <a href="service-details.html?filter=.filter-app11" class="stretched-link">
                   <h3>Personal Instagram Consulting</h3>
                 </a>
-                <p>Offers tailored advice to enhance your Instagram presence and grow your personal brand.</p>
+                <p>Grow your <b> personal brand</b> with a customized Instagram growth strategy. We guide you on <b> content creation, engagement tactics, and algorithm insights</b> to build a strong personal presence.</p>
                 <a href="service-details.html?filter=.filter-app11" class="stretched-link"></a>
               </div>
             </div><!-- End Service Item -->
+           
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
+              <div class="service-item position-relative">
+                <div class="icon" style="background-color: white;">
+                  <!-- <i class="bi bi-activity"></i> -->
+                  <img src="assets/img/Beezy/Icons/content-marketing (1).png" class="icon2 mb-1"/>
+                </div>
+                <a href="service-details.html?filter=.filter-app10" class="stretched-link">
+                  <h3>Marketing Consulting For Business</h3>
+                </a>
+                <p> Get expert <b> business marketing consulting</b> to improve your branding, customer engagement, and sales. We help you develop <b>effective marketing strategies </b>tailored to your industry.</p>
+                <a href="service-details.html?filter=.filter-app10" class="stretched-link"></a>
+              </div>
+            </div><!-- End Service Item -->
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app" data-aos="fade-up" data-aos-delay="200">
+              <div class="service-item position-relative">
+                <div class="icon" style="background-color: white;">
+                  <!-- <i class="bi bi-activity"></i> -->
+                  <img src="assets/img/Beezy/Icons/adwords.png" class="icon2 mb-1"/>
+                </div>
+                <a href="service-details.html?filter=.filter-app9" class="stretched-link">
+                  <h3>Google Ads</h3>
+                </a>
+                <p>Run <b>highly targeted</b> Google Ads campaigns to attract the <b> right audience, generate leads, and increase conversions</b> for your business.</p>
+                <a href="service-details.html?filter=.filter-app9" class="stretched-link"></a>
+              </div>
+            </div><!-- End Service Item -->
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app" data-aos="fade-up" data-aos-delay="200">
+              <div class="service-item position-relative">
+                <div class="icon" style="background-color: white;">
+                  <!-- <i class="bi bi-activity"></i> -->
+                  <img src="assets/img/Beezy/Icons/location.png" class="icon2 mb-1"/>
+                </div>
+                <a href="service-details.html?filter=.filter-app7" class="stretched-link">
+                  <h3>Location-Based Collaborations</h3>
+                </a>
+                <p>Partner with <b> local pages, businesses, and influencers </b>to <b> increase visibility in your target area</b>, driving <b> organic engagement and local brand recognition</b>.</p>
+              </div>
+            </div><!-- End Service Item -->
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app" data-aos="fade-up" data-aos-delay="200">
+              <div class="service-item position-relative">
+                <div class="icon" style="background-color: white;">
+                  <!-- <i class="bi bi-activity"></i> -->
+                   
+                  <img src="assets/img/Beezy/Icons/ads.png" class="icon2 mb-1"/>
+                </div>
+                <a href="service-details.html?filter=.filter-app8" class="stretched-link">
+                  <h3>Snapchat Ads</h3>
+                </a>
+                <p>Tap into the <b>Gen Z and Millennial audience</b> with creative, engaging Snapchat ads that help brands <b>connect, promote, and sell</b> in a visually engaging format.</p>
+                <a href="service-details.html?filter=.filter-app8" class="stretched-link"></a>
+              </div>
+            </div><!-- End Service Item -->
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app" data-aos="fade-up" data-aos-delay="200">
+              <div class="service-item position-relative">
+                <div class="icon" style="background-color: white;">
+                  <!-- <i class="bi bi-activity"></i> -->
+                  <img src="assets/img/Beezy/Icons/optimization.png" class="icon2 mb-1"/>
+                </div>
+                <a href="service-details.html?filter=.filter-app2" class="stretched-link">
+                  <h3>Google Listing Optimization</h3>
+                </a>
+                <p>Ensure your <b>business ranks higher</b> on Google Maps and search results by optimizing your <b>Google My Business (GMB) profile</b>, increasing customer trust and visibility.</p>
+              </div>
+            </div>   
+            
+            
+            
 
           </div>
         </div>
@@ -399,7 +448,7 @@
 
     <!-- Portfolio Section -->
     <section id="portfolio" class="portfolio section services">
-
+      
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
         <h2>Products</h2>
@@ -851,7 +900,7 @@
         <p>Join Our Team</p>
       </div><!-- End Section Title -->
 
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
+      <div class="container" data-aos="fade-up" >
         <div class="row gy-4">
           <!-- Job Opening 1 -->
           <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
@@ -861,23 +910,23 @@
               <ul class="career-details">
                 <li><strong>Location:</strong> Kochi, India</li>
                 <li><strong>Type:</strong> Full-Time</li>
-                <li><strong>Experience:</strong> 2+ years</li>
+                <li><strong>Experience:</strong> 1 year</li>
               </ul>
-              <a href="mailto:careers@beezy.solutions?subject=Application:%20Social%20Media%20Manager" class="apply-link stretched-link">Apply Now</a>
+              <a href="mailto:beezysolution@gmail.com?subject=Application:%20Social%20Media%20Manager" class="apply-link stretched-link">Apply Now</a>
             </div>
           </div><!-- End Job Opening 1 -->
 
           <!-- Job Opening 2 -->
           <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
             <div class="career-item position-relative">
-              <h3>SEO Specialist</h3>
-              <p>Optimize websites and content to improve search engine rankings and drive organic traffic.</p>
+              <h3>Digital marketing expert </h3>
+              <p>Expertise in social media marketing, Meta Ads, Google Ads, SEO, and influencer marketing.</p>
               <ul class="career-details">
-                <li><strong>Location:</strong> Remote</li>
-                <li><strong>Type:</strong> Part-Time</li>
-                <li><strong>Experience:</strong> 1-3 years</li>
+                <li><strong>Location:</strong> Kochi</li>
+                <li><strong>Type:</strong> Full Time</li>
+                <li><strong>Experience:</strong> 1 year</li>
               </ul>
-              <a href="mailto:careers@beezy.solutions?subject=Application:%20SEO%20Specialist" class="apply-link stretched-link">Apply Now</a>
+              <a href="mailto:beezysolution@gmail.com?subject=Application:%20SEO%20Specialist" class="apply-link stretched-link">Apply Now</a>
             </div>
           </div><!-- End Job Opening 2 -->
 
@@ -887,11 +936,11 @@
               <h3>Content Creator</h3>
               <p>Produce engaging content for digital platforms, including blogs, social media, and videos.</p>
               <ul class="career-details">
-                <li><strong>Location:</strong> Remote</li>
-                <li><strong>Type:</strong> Freelance</li>
-                <li><strong>Experience:</strong> 1+ years</li>
+                <li><strong>Location:</strong> Kochi</li>
+                <li><strong>Type:</strong> Part-Time</li>
+                <li><strong>Experience:</strong> 1 year</li>
               </ul>
-              <a href="mailto:careers@beezy.solutions?subject=Application:%20Content%20Creator" class="apply-link stretched-link">Apply Now</a>
+              <a href="mailto:beezysolution@gmail.com?subject=Application:%20Content%20Creator" class="apply-link stretched-link">Apply Now</a>
             </div>
           </div><!-- End Job Opening 3 -->
         </div>
@@ -990,14 +1039,14 @@
     <!-- Contact Section -->
 <section id="contact" class="contact section">
   <!-- Section Title -->
-  <div class="container section-title" data-aos="fade-up">
+  <div class="container section-title">
     <h2>Contact</h2>
     <p>Contact Us</p>
   </div><!-- End Section Title -->
 
-  <div class="container" data-aos="fade-up" data-aos-delay="100">
+  <div class="container" data-aos="fade-up" >
     <div class="mb-4" data-aos="fade-up" data-aos-delay="200">
-      <iframe style="border:0; width: 100%; height: 270px;" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d48389.78314118045!2d-74.006138!3d40.710059!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25a22a3bda30d%3A0xb89d1fe6bc499443!2sDowntown%20Conference%20Center!5e0!3m2!1sen!2sus!4v1676961268712!5m2!1sen!2sus" frameborder="0" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      <iframe style="border:0; width: 100%; height: 270px;" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31431.075449169297!2d76.29152171715954!3d10.02639472570495!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b080da53444d5e9%3A0xb46c57c6b1bc9aff!2sEdappally%2C%20Kochi%2C%20Kerala!5e0!3m2!1sen!2sin!4v1742721198375!5m2!1sen!2sin" frameborder="0" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div><!-- End Google Maps -->
 
     <div class="row gy-4">
@@ -1006,7 +1055,7 @@
           <i class="bi bi-geo-alt flex-shrink-0"></i>
           <div>
             <h3>Address</h3>
-            <p>A108 Adam Street, New York, NY 535022</p>
+            <p>Edapally,Kochi,Kerala</p>
           </div>
         </div><!-- End Info Item -->
 
@@ -1014,7 +1063,7 @@
           <i class="bi bi-telephone flex-shrink-0"></i>
           <div>
             <h3>Call Us</h3>
-            <p>+1 5589 55488 55</p>
+            <p>+91 7907324803</p>
           </div>
         </div><!-- End Info Item -->
 
@@ -1022,16 +1071,18 @@
           <i class="bi bi-envelope flex-shrink-0"></i>
           <div>
             <h3>Email Us</h3>
-            <p>info@example.com</p>
+            <p>info@beezysolutions.in</p>
           </div>
         </div><!-- End Info Item -->
         
         <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="500">
-          <a href=""><i class="bi bi-instagram flex-shrink-0"></i></a>
-          <a href=""><i class="bi bi-facebook flex-shrink-0"></i></a>
-          <a href=""><i class="bi bi-whatsapp flex-shrink-0"></i></a>
+          <a href="https://www.instagram.com/beezysolutions/" title="instagram"><i class="bi bi-instagram flex-shrink-0"></i></a>
+          <a href="https://www.facebook.com/people/Beezy-Solutions/" title="facebook"><i class="bi bi-facebook flex-shrink-0"></i></a>
+          <a href="https://wa.me/917907324803" ><i class="bi bi-whatsapp flex-shrink-0"></i></a>
+          <a href="https://www.youtube.com/@beezysolutions" title="youtube"><i class="bi bi-youtube flex-shrink-0"></i></a>
+          <a href="https://linktr.ee/beezysolutions" title="Linktree"><i class="bi bi-link-45deg flex-shrink-0"></i></a>
           <a href=""><i class="bi bi-linkedin flex-shrink-0"></i></a>
-          <a href=""><i class="bi bi-whatsapp" style="width: fit-content;padding: 0px 10px 0px 10px;">&nbsp;&nbsp;Chat Now</i></a>
+          <!-- <a href=""><i class="bi bi-whatsapp" style="width: fit-content;padding: 0px 10px 0px 10px;">&nbsp;&nbsp;Chat Now</i></a> -->
         </div><!-- End Info Item -->
       </div>
 
@@ -1071,29 +1122,29 @@
         <div class="row gy-4">
           <div class="col-lg-4 col-md-6 footer-about">
             <a href="index.html" class="logo d-flex align-items-center">
-              <img src="assets/img/Beezy/logo1.png" alt="" style="transform: scale(8);filter: brightness(1);">
+              <img src="assets/img/Beezy/logo1.png" alt="" style="transform: scale(6);filter: brightness(1);">
 
             </a>
             <div class="footer-contact pt-3">
-              <p>Kochi</p>
+              <p>Edapally,Kochi</p>
               <p>India</p>
-              <p class="mt-3"><strong>Phone:</strong> <span>+1 5589 55488 55</span></p>
-              <p><strong>Email:</strong> <span>test@gmail.com</span></p>
+              <p class="mt-3"><strong>Phone:</strong> <span>+91 7907324803</span></p>
+              <p><strong>Email:</strong> <span>beezysolution@gmail.com</span></p>
             </div>
             <div class="social-links d-flex mt-4">
-              <a href=""><i class="bi bi-twitter-x"></i></a>
-              <a href=""><i class="bi bi-facebook"></i></a>
-              <a href=""><i class="bi bi-instagram"></i></a>
-              <a href=""><i class="bi bi-linkedin"></i></a>
+              <a href="https://wa.me/917907324803"><i class="bi bi-whatsapp"></i></a>
+              <a href="https://www.facebook.com/people/Beezy-Solutions/"><i class="bi bi-facebook"></i></a>
+              <a href="https://www.instagram.com/beezysolutions/"><i class="bi bi-instagram"></i></a>
+              <a href="https://www.youtube.com/@beezysolutions"><i class="bi bi-youtube"></i></a>
             </div>
           </div>
 
           <div class="col-lg-2 col-md-3 footer-links">
             <h4>Useful Links</h4>
             <ul>
-              <li><i class="bi bi-chevron-right"></i> <a href="#"> Home</a></li>
-              <li><i class="bi bi-chevron-right"></i> <a href="#"> About us</a></li>
-              <li><i class="bi bi-chevron-right"></i> <a href="#"> Services</a></li>
+              <li><i class="bi bi-chevron-right"></i> <a href="#hero"> Home</a></li>
+              <li><i class="bi bi-chevron-right"></i> <a href="#about"> About us</a></li>
+              <li><i class="bi bi-chevron-right"></i> <a href="#services"> Services</a></li>
               <li><i class="bi bi-chevron-right"></i> <a href="#"> Terms of service</a></li>
               <li><i class="bi bi-chevron-right"></i> <a href="#"> Privacy policy</a></li>
             </ul>
@@ -1102,25 +1153,26 @@
           <div class="col-lg-2 col-md-3 footer-links">
             <h4>Our Services</h4>
             <ul>
-              <li><i class="bi bi-chevron-right"></i> <a href="#"> SEO</a></li>
-              <li><i class="bi bi-chevron-right"></i> <a href="#"> Google Ads</a></li>
+              <li><i class="bi bi-chevron-right"></i> <a href="#"> Digital Marketing</a></li>
+              <li><i class="bi bi-chevron-right"></i> <a href="#"> Video Production</a></li>
               <li><i class="bi bi-chevron-right"></i> <a href="#"> Content Creation</a></li>
-              <li><i class="bi bi-chevron-right"></i> <a href="#"> Personal Instagram Consulting</a></li>
-              <li><i class="bi bi-chevron-right"></i> <a href="#"> Social Media Growth & Handling</a></li>
+              <li><i class="bi bi-chevron-right"></i> <a href="#"> Consulting</a></li>
+              <li><i class="bi bi-chevron-right"></i> <a href="#">NFC Cards</a></li>
+              <li><i class="bi bi-chevron-right"></i> <a href="#">Hot Deals Kochi</a></li>
             </ul>
           </div>
-          <!-- 
+           
           <div class="col-lg-4 col-md-12 footer-newsletter">
             <h4>Our Newsletter</h4>
             <p>Subscribe to our newsletter and receive the latest news about our products and services!</p>
-            <form action="forms/newsletter.php" method="post" class="php-email-form">
-              <div class="newsletter-form"><input type="email" name="email"><input type="submit" value="Subscribe"></div>
+            <form method="post" class="php-email-form" >
+              <div class="newsletter-form"><input type="email" name="email"><input type="submit" value="Subscribe" disabled></div>
               <div class="loading">Loading</div>
               <div class="error-message"></div>
               <div class="sent-message">Your subscription request has been sent. Thank you!</div>
             </form> 
           </div>
-          -->
+          
         </div>
       </div>
     </div>
@@ -1131,6 +1183,8 @@
 
   <!-- Scroll Top -->
   <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+  <a href="https://wa.me/917907324803?q=Hello, I Want To Transform My Business/Personal Instagram account !" title="Chat Now" id="whatsapp" class="whatsapp d-flex align-items-center justify-content-center"><i class="bi bi-whatsapp"></i></a>
+
 
   <!-- Preloader -->
   <div id="preloader"></div>
@@ -1192,6 +1246,43 @@
             loading.style.display = 'none';
             errorMessage.textContent = 'Failed to send message. Please try again later.';
             errorMessage.style.display = 'block';
+            console.error('EmailJS Error:', error);
+          });
+      });
+
+      //Quote Form
+      const q_form = document.getElementById('quote-form');
+      const q_loading = q_form.querySelector('.q-loading');
+      const q_errorMessage = q_form.querySelector('.q-error-message');
+      const q_sentMessage = q_form.querySelector('.q-sent-message');
+
+      q_form.addEventListener('submit', function(event) {
+        event.preventDefault(); // Prevent default form submission
+        // Show loading state
+        q_loading.style.display = 'block';
+        q_errorMessage.style.display = 'none';
+        q_sentMessage.style.display = 'none';
+        // Collect form data
+        const q_formData = {
+          name: q_form.name.value,
+          company: q_form.company.value,
+          phone: q_form.phone.value,
+          country: q_form.country.value,
+          time:Date.now(),
+        };
+        console.log(q_formData);
+        // Send email via EmailJS
+        emailjs.send("service_yzs5rmm", "template_jeukv83", q_formData)
+          .then(function(response) {
+            // Success
+            q_loading.style.display = 'none';
+            q_sentMessage.style.display = 'block';
+            q_form.reset(); // Clear the form
+          }, function(error) {
+            // Error
+            q_loading.style.display = 'none';
+            q_errorMessage.textContent = 'Failed to send message. Please try again later.';
+            q_errorMessage.style.display = 'block';
             console.error('EmailJS Error:', error);
           });
       });
